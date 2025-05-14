@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="LingifyNow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+</head>
+<body>
+    <header>
+        <span class="imgContainer">
+            <img src="Lingi.png" alt="LingifyNow Icon" />
+        </span>
+        <span id="webName" class="webName">LingifyNow</span>
+    </header>
+    <div class="mainContainer">
+        <nav class="navbar">
+            <a id="navMenuIcon" class="navMenuIcon"><i class="fas fa-bars" title="Menu"></i></a>
+            <span class="filesText">Files</span>  
+            <div class="searchDiv">
+                <input for="search" id="navSearchInpt" type="text" placeholder="Search file">               
+                <a id="navSearchIcon" class="searchIcon"><i class="fas fa-search" title="Search"></i></a>
+            </div>
+            <a id="navSettingIcon" class="navSettingIcon"><i class="fas fa-cog" title="Settings"></i></a>
+        </nav>
+
+        <div class="contentContainer">
+            <aside id="sideBar" class="sideBar">
+                <ul>
+                    <li class="file">Files</li>
+                    <li class="favs">Favorites</li>
+                    <li class="collects">Collections</li>
+                    <li class="dictionary">Dictionary</li>
+                    <li class="trash">Trash</li>
+                
+                </ul>
+            </aside>
+
+            <section class="fileListContainer">
+                <div class="fileItem">
+                    <div class="fileImg"></div>
+                    <p class="fileName">The Legend of the Penis</p>
+                    <p class="fileProperties"><span class="format">PDF</span> <span class="size">1.5 MB</span></p>
+                    <i class="fa-regular fa-star" title="Favorite"></i>
+                    <i class="fa fa-thumbtack"></i>
+                    <i class="fa fa-ellipsis-vertical"></i>
+                </div>
+                <div class="fileItem">
+                    <div class="fileImg"></div>
+                    <p class="fileName">The Legend of the Penis</p>
+                    <p class="fileProperties"><span class="format">PDF</span> <span class="size">1.5 MB</span></p>
+                    <i class="fa-regular fa-star" title="Favorite"></i>
+                    <i class="fa fa-thumbtack"></i>
+                    <i class="fa fa-ellipsis-vertical"></i>
+                </div>
+                <div class="fileItem">
+                    <div class="fileImg"></div>
+                    <p class="fileName">The Legend of the Penis</p>
+                    <p class="fileProperties"><span class="format">PDF</span> <span class="size">1.5 MB</span></p>
+                    <i class="fa-regular fa-star" title="Favorite"></i></a>
+                    <i class="fa fa-thumbtack"></i>
+                    <i class="fa fa-ellipsis-vertical"></i>
+                </div>
+                           
+           
+            </section>
+
+            <button id="uploadBtn">
+                    <i class="fa-regular fa-plus"></i>
+                        <p>Upload</p>
+                    <input type="file" id="fileInpt" accept=".txt,.pdf,.epub,.docx,.doc">
+                </button>   
+
+        </div>
+
+        <div id="settingPanel" class="settingContainer">
+            <ul>
+                <li>Delete list</li>
+                <li id="settingSortBtn">Sort by</li>
+                <li id="settingFltrBtn">Filter</li>
+                <li>Go to Premium</li>
+            </ul>
+        </div>
+
+        <div id="sortPanel" class="settingContainer">
+            <ul>
+                <p>Sort by</p>
+                <li>
+                <input type="radio" id="sortFileName" name="sort" value="fileName" />
+                <label for="sortFilename">File name</label>
+                </li>
+                <li>
+                <input type="radio" id="sortFormat" name="sort" value="format" />
+                <label for="sortFormat">File format</label>
+                </li>
+                <li>
+                <input type="radio" id="sortSize" name="sort" value="size" />
+                <label for="sortSize">File size</label>
+                </li>
+                <li>
+                <input type="radio" id="sortFodified" name="sort" value="modified" />
+                <label for="sortModified">Modified time</label>
+                </li>
+                <li>
+                <input type="radio" id="sortDateRead" name="sort" value="dateRead" />
+                <label for="sortDateRead">Date read</label>
+                </li>
+            </ul>
+
+        </div>
+
+        <div id="fltrPanel" class="settingContainer">
+            <ul>
+                <p>Filter</p>
+                <li>
+                    <input type="radio" id="fltrPdf" name="filter"/>
+                    <label for="fltrPdf">PDF</label>
+                </li>
+                <li>
+                    <input type="radio" id="fltrEpub" name="filter"/>
+                    <label for="fltrEpub">EPUB</label>
+                </li>
+                <li>
+                    <input type="radio" id="fltrDocx" name="filter"/>
+                    <label for="fltrDocx">DOCX</label>
+                </li>
+                <li>
+                    <input type="radio" id="fltrDoc" name="filter"/>
+                    <label for="fltrDoc">DOC</label>
+                </li>
+                <li>
+                    <input type="radio" id="fltrTxt" name="filter"/>
+                    <label for="fltrTxt">TXT</label>
+                </li>
+            </ul>
+
+                    
+        </div>
+
+       
+
+    
+    </div>
+
+    <script src="LingifyNow.js"></script>
+</body>
+</html>
+

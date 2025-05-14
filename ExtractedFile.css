@@ -1,0 +1,146 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    margin: 1rem;
+    background-color: hsl(213, 51%, 12%);
+    color:rgb(211, 240, 246);
+}
+
+
+.navbar {
+    background-color: hsla(213, 51%, 9%, 0.751);
+    color: hsl(190, 66%, 90%);
+    display: flex;
+    height: .5rem;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+
+}
+
+.navBar .searchDiv{
+    width: 50%;
+}
+
+.navbar #navSearchInpt{
+    /* width: 2%; */
+}
+
+
+.navBar p{
+    font-weight: bold;
+}
+
+
+.textSettingContainer {
+    display: none;
+    position: absolute;
+    top: 9.5%;
+    right: 2.5%;
+    width: 40%;
+    gap: 4px;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(214, 56%, 25%);
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+
+
+.txtLabel {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color:hsl(214, 56%, 90%);
+    user-select: text;
+    flex-shrink: 0;
+}
+
+.pageColor {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 2px solid hsl(190, 66%, 90%);
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+    flex-shrink: 0;
+}
+
+#pageColorWhite {
+    background-color: #ffffff;
+}
+
+#pageColorBeige {
+    background-color: hsl(40, 38%, 83%);
+}
+  
+#pageColorBlack {
+    background-color: #222222;
+}
+
+
+
+.textSettingContainer .fontAdjust{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: hsl(214, 50%, 50%);
+    color: hsl(214, 50%, 90%);
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px hsla(216, 100%, 0%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show{
+    display: flex;
+}
+
+
+
+.tableContentContainer {
+    display: none; 
+    position: absolute;
+    right: 0;
+    width:fit-content;
+    height: 100vh;
+    background-color: hsl(214, 50%, 25%);
+    margin: 0;
+    padding: 0;
+}
+
+.tableContent {
+    margin: 0;
+    padding: 0;
+}
+
+.tableContent li {
+    padding: 1rem 2rem;
+    margin: 0;
+    list-style: none;
+}
+
+.tableContent li:hover {
+    background-color:  hsl(214, 50%, 30%);
+}
+
+.document{
+    width: 100vh;
+    height: 100vh;
+    background-color: hsl(214, 50%, 100%);
+}
+
+
+a{
+    color: hsl(214, 50%, 90%);
+    font-style: normal;
+}

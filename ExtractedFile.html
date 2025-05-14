@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ExtractedFile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <title>File</title>
+</head>
+<body>
+    <div>
+
+        <nav class="navbar">
+            <a class="fa-solid fa-arrow-left" href="FilesDisplay.html"></a>
+            <h3>Extracted File Title</h3>
+            <div class="searchDiv">
+                <input for="search" id="navSearchInpt" type="text" placeholder="Search file">               
+                <i navSearchIcon class="fas fa-search" title="Search"></i>
+            </div>
+            <a id="dictionary" class="fa-solid fa-book" href="Dictionary.html"></a>
+            <p id="fontSetting" class="fontSetting">Aa</p>
+            <i class="fa-solid fa-pen-to-square"></i>
+            <i id="tableContentIcon" class="fa-solid fa-list-ul"></i>
+        </nav>
+
+        <div id="textSettingContainer" class="textSettingContainer">
+            <span id="labelPageColor" class="txtLabel">Page color</span>
+            <div id="pageColorWhite" class="pageColor selected" tabindex="0" role="button" aria-label="Set page color white" title="White"></div>
+            <div id="pageColorBeige" class="pageColor" tabindex="0" role="button" aria-label="Set page color beige" title="Beige"></div>
+            <div id="pageColorBlack" class="pageColor" tabindex="0" role="button" aria-label="Set page color black" title="Black"></div>
+
+            <span id="labelFontSize" class="txtLabel">Font size</span>
+            <div id="decreaseFont" class="fontAdjust"><i class="fa-solid fa-minus"></i></div>
+            <div id="increaseFont" class="fontAdjust"><i class="fa-solid fa-plus"></i></div>
+            </div>
+                
+        </div>
+
+        <div id="tableContentContainer" class="tableContentContainer">
+            <ul class="tableContent">
+                <li>Chapter 1</li>
+                <li>Chapter 2</li>
+                <li>Chapter 3</li>
+                <li>Chapter 4</li>
+                <li>Chapter 5</li>
+            </ul>
+
+        </div>
+
+        <div class="document">
+
+
+        </div>
+
+        <nav>
+            <p class="pageNum"></p>
+            
+        </nav>
+
+
+
+    </div>
+    
+    
+
+    <script src="ExtractedFile.js"></script>
+</body>
+</html>
