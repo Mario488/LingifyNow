@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ExtractedFile.css">
+    <link rel="stylesheet" href="../css/ExtractedFile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <title>File</title>
 </head>
 <body>
-    <div>
+    <div class="extractedFileContainer">
 
         <nav class="navbar">
-            <a class="fa-solid fa-arrow-left" href="FilesDisplay.html"></a>
+            <a class="fa-solid fa-arrow-left" href="../html/FilesDisplay.html"></a>
             <h3>Extracted File Title</h3>
             <div class="searchDiv">
                 <input for="search" id="navSearchInpt" type="text" placeholder="Search file">               
                 <i navSearchIcon class="fas fa-search" title="Search"></i>
             </div>
-            <a id="dictionary" class="fa-solid fa-book" href="Dictionary.html"></a>
-            <p id="fontSetting" class="fontSetting">Aa</p>
-            <i class="fa-solid fa-pen-to-square"></i>
-            <i id="tableContentIcon" class="fa-solid fa-list-ul"></i>
+            <a id="dictionary" class="fa-solid fa-book" href="../html/Dictionary.html"></a>
+            <button id="fontSetting" class="fontSetting">Aa</button>
+            <button class="fa-solid fa-pen-to-square"></button>
+            <button id="tableContentIcon" class="fa-solid fa-list-ul"></button>
         </nav>
 
         <div id="textSettingContainer" class="textSettingContainer">
@@ -48,12 +48,12 @@
         </div>
 
         <div class="document">
-
+            
 
         </div>
 
-        <nav>
-            <p class="pageNum"></p>
+        <nav class="progress">
+            <p class="pageNum">1 out of 40 pages</p>
             
         </nav>
 
@@ -63,6 +63,6 @@
     
     
 
-    <script src="ExtractedFile.js"></script>
+    <script src="../js/ExtractedFile.js"></script>
 </body>
 </html>

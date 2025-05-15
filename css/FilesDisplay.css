@@ -59,6 +59,13 @@ header img{
     padding: 5px;
 }
 
+.navbar button{
+    background-color: transparent;
+    color: hsl(190, 66%, 90%); 
+    border-width: 0;
+    font-size: 1.1rem;
+}
+
 .filesText {
     font-size: 1rem;
     font-weight: bold;
@@ -66,13 +73,9 @@ header img{
 
 /* NAVBAR END */
 
-
 div i{
     color: hsl(190, 66%, 90%);
 }
-
-
-
 
 .fileListContainer {
     max-width: 650px;
