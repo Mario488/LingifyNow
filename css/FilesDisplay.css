@@ -71,6 +71,14 @@ header img{
     font-weight: bold;
 }
 
+.navbar button:hover, a:hover{
+    color: hsl(214, 50%, 60%);
+}
+
+.navbar button:active, a:active{
+    color: hsl(214, 50%, 50%);
+}
+
 /* NAVBAR END */
 
 div i{

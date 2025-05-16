@@ -46,6 +46,14 @@ body {
     text-decoration: none;
 }
 
+.navbar button:hover, a:hover{
+    color: hsl(214, 50%, 60%);
+}
+
+.navbar button:active, a:active{
+    color: hsl(214, 50%, 50%);
+}
+
 .navbar #fontSetting{
     font-weight: bold;
 }
@@ -101,7 +109,7 @@ body {
 
 
 
-.textSettingContainer .fontAdjust{
+.textSettingContainer .fontAdjust {
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -147,14 +155,13 @@ body {
     background-color:  hsl(214, 50%, 30%);
 }
 
-.document{
-    width: 180vh;
-    height: 100vh;
-    margin: 1rem 2rem;
-    justify-self: center;
-    border-radius: 14px;
-    background-color: hsla(213, 51%, 57%, 0.751);
-} 
+
+.page-container{
+    display: flex;
+    flex-direction: column;
+    background-color:  hsl(214, 50%, 30%);
+    border-radius: 5px;
+}
 
 
 a{
@@ -163,19 +170,66 @@ a{
 }
 
 
-.progress{
-    background-color: hsla(213, 51%, 9%, 0.751);
-    color: hsl(190, 66%, 90%);
-    position: sticky;
-    bottom: 1rem;
-    width: 99%;
-    z-index: 9999;
+.document{
     display: flex;
-    height: 1rem;
-    padding: 1rem 1rem;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-radius: 4px;
+    height: calc(100vh - 150px);
+    background-color: #fff;
+    color: #122C4A;
 }
+.docContent{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.progress button{
+    background-color: hsl(214, 50%, 80%);
+    border-radius: 50px;
+    border: none;
+    padding: .8% .8%;
+    color: hsl(214, 50%, 30%);
+    
+
+}
+
+.progress{  
+    display: flex;
+    align-items: center;
+    background-color: hsla(213, 51%, 9%, 0.751);
+    width: 100%;
+    text-align: center;
+    padding: .5% 0%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.progress .page-number{
+    padding: .6% 1.4%
+}
+
+.progress .pageBtn{
+    padding: .7% 1.5%;
+}
+
+.progress input{
+    padding: 10px 15px;
+    background-color: hsl(214, 50%, 80%);
+    border-width: 0;
+    border-radius: 3px;
+}
+
+.progress button:hover{
+    background-color: hsl(214, 50%, 70%);
+}
+
+
+
+
+
+
+
+
+
 
 
