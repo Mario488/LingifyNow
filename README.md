@@ -1,4 +1,5 @@
 📚 LingifyNow
+
 LingifyNow is a web-based platform that allows users to upload text-based files (TXT, PDF), extract and personalize the content visually and functionally. It’s perfect for language learners, readers, and educators looking to build a rich, interactive reading experience.
 
 🚀 Features
