@@ -5,7 +5,7 @@ LingifyNow is a web-based platform that allows users to upload text-based files 
 🚀 Features
 
 📄 Upload & Extract
-Upload .txt and .pdf files and automatically extract the text content.
+-Upload .txt and .pdf files and automatically extract the text content.
 
 🎨 Customize Your Reading Experience
 
