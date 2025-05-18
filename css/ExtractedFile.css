@@ -26,6 +26,17 @@ body {
     width: 50%;
 }
 
+.navbar .loginBtn{
+    font-weight: bold;
+}
+
+.navbar .searchDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 17px;
+}
+
 .navbar #navSearchInpt{
     /* width: 2%; */
 }
@@ -55,6 +66,10 @@ body {
 }
 
 .navbar #fontSetting{
+    font-weight: bold;
+}
+
+.navbar .loginBtn{
     font-weight: bold;
 }
 
@@ -221,6 +236,97 @@ a{
 
 .progress button:hover{
     background-color: hsl(214, 50%, 70%);
+}
+
+.transContainer{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    font-weight: 700;
+    padding: 4px 12px;
+    background-color: hsla(214, 100%, 81%, .7);
+    color: hsl(214, 100%, 24%);
+    border-width: 0;
+    border-radius: 40px 40px 40px 0px;;
+    box-shadow: 0 5px 8px hsla(216, 85%, 20%, 0.3);
+    position: absolute;
+}
+
+.transWord {
+    font-size: .9rem;
+}
+
+
+.transLang {
+    font-weight: 600;
+    font-size: .6rem;
+}
+
+.transContainer p{
+    margin: 0;
+}
+
+.transContainer:active {
+    background-color: hsl(214, 50%, 70%);
+    box-shadow: 0 4px 10px hsla(214, 85%, 41%, 0.6);
+} 
+
+.definitionContainer{
+    width: fit-content;
+    height: fit-content;
+    padding: 2% 3%;
+    background-color: hsl(214, 50%, 49%);
+    border-radius: 7px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+    box-shadow: 0 4px 5px hsla(214, 50%, 10%, .3);
+}
+
+.definitionContainer .origWord{
+    font-size: 11px;
+}
+
+.definitionContainer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.definitionContainer .transWord{
+    font-size: 15px;
+    font-weight: bold;
+    color: hsl(214, 50%, 90%);
+}
+
+.definitionContainer .trasDefinition{
+    margin:.5% 0% 2% 5%;
+    font-size: 14px;
+    color: hsl(214, 50%, 84%);
+
+}
+.definitionContainer p{
+    font-size: 11px;
+    margin: 0;
+}
+
+.definitionContainer .sentenceUsed{
+    font-size: 14px;
+    margin:.5% 0% .5% 5%;
+    color: hsl(214, 50%, 88%);
+}
+.definitionContainer button{
+    background-color: hsl(214, 50%, 80%);
+    width: 60px;
+    height: 30px;
+    border-width: 0;
+    border-radius: 7px;
+    float: right;
+    box-shadow: 0 4px 5px hsla(214, 50%, 10%, .3);
+
 }
 
 

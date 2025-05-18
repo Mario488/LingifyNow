@@ -56,7 +56,7 @@ header img{
 }
 
 .navbar #navSearchInpt{
-    padding: 5px;
+    padding: 3px;
 }
 
 .navbar button{
@@ -65,6 +65,17 @@ header img{
     border-width: 0;
     font-size: 1.1rem;
 }
+
+.navbar .loginBtn{
+    font-weight: bold;
+}
+
+.navbar .searchDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+}
+
 
 .filesText {
     font-size: 1rem;
@@ -265,4 +276,4 @@ ul{
 
 
 
-
+ 
