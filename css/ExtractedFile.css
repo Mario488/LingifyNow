@@ -9,7 +9,37 @@ body {
     color:rgb(211, 240, 246);
 }
 
+/* HEADER */
+header{
+    position: relative;
+    height: 60px;
+}
 
+header #webName{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: hsl(190, 66%, 90%);
+}
+
+header img{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+/* HEADER END */
+
+
+/* NAVIGATION */
 .navbar {
     background-color: hsla(213, 51%, 9%, 0.751);
     color: hsl(190, 66%, 90%);
@@ -23,7 +53,9 @@ body {
 }
 
 .navBar .searchDiv{
-    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
 }
 
 .navbar .loginBtn{
@@ -38,12 +70,19 @@ body {
 }
 
 .navbar #navSearchInpt{
-    /* width: 2%; */
+    padding: 5px 10px;
+    width: 200px;
+    border-radius: 5px;
+    transition: .3s all;
 }
 
+.navbar #navSearchInpt::placeholder{
+    letter-spacing: 3px;
+}
 
-.navbar p{
-    font-weight: bold;
+.navbar #navSearchInpt:focus{ 
+    outline: 2px solid hsl(214, 50%, 60%);
+    transform: scale(1.05);
 }
 
 .navbar button{
@@ -53,7 +92,9 @@ body {
     font-size: 1.1rem;
 }
 
-.navbar a{
+a{
+    color: hsl(214, 50%, 90%);
+    font-style: normal;
     text-decoration: none;
 }
 
@@ -73,21 +114,23 @@ body {
     font-weight: bold;
 }
 
+/* NAVIGATION END */
 
+
+/* BACKGROUND AND FONT SETTINGS */
 .textSettingContainer {
     display: none;
     position: absolute;
     top: 9.5%;
     right: 2.5%;
-    width: 40%;
-    gap: 4px;
-    height: fit-content;
+    width: fit-content;
+    gap: 8px;
     align-items: center;
     justify-content: space-between;
     background-color: hsl(214, 56%, 25%);
     border-radius: 12px;
     padding: 14px 18px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -96,8 +139,6 @@ body {
     font-weight: 600;
     font-size: 1.1rem;
     color:hsl(214, 56%, 90%);
-    user-select: text;
-    flex-shrink: 0;
 }
 
 .pageColor {
@@ -107,7 +148,6 @@ body {
     border: 2px solid hsl(190, 66%, 90%);
     cursor: pointer;
     box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
-    flex-shrink: 0;
 }
 
 #pageColorWhite {
@@ -134,22 +174,19 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 2px 8px hsla(216, 100%, 0%, 0.5);
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
 }
+/* END OF BACKGROUND AND FONT SETTINGS*/
 
-.show{
-    display: flex;
-}
-
-
+/* TABLE OF CONTENTS */
 .tableContentContainer {
     display: none; 
     position: absolute;
     right: 0;
     width:fit-content;
-    height: 100vh;
+    height: calc(100vh - 116px);
     background-color: hsl(214, 50%, 25%);
     margin: 0;
     padding: 0;
@@ -170,7 +207,10 @@ body {
     background-color:  hsl(214, 50%, 30%);
 }
 
+/* END OF TABLE OF CONTENTS */
 
+
+/* PAGE CONTAINER */
 .page-container{
     display: flex;
     flex-direction: column;
@@ -179,17 +219,11 @@ body {
 }
 
 
-a{
-    color: hsl(214, 50%, 90%);
-    font-style: normal;
-}
-
-
 .document{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 186px);
     background-color: #fff;
     color: #122C4A;
 }
@@ -197,15 +231,15 @@ a{
     margin-left: 6%;
     margin-right: 6%;
 }
+/* END OF PAGE CONTAINER */
 
+/* READING PROGRESS */
 .progress button{
     background-color: hsl(214, 50%, 80%);
     border-radius: 50px;
     border: none;
     padding: .8% .8%;
     color: hsl(214, 50%, 30%);
-    
-
 }
 
 .progress{  
@@ -238,17 +272,21 @@ a{
     background-color: hsl(214, 50%, 70%);
 }
 
+/* END OF READING PROGRESS */
+
+/* HOVER TRANSLATION */
+
 .transContainer{
     width: fit-content;
     height: fit-content;
     display: flex;
     gap: 25px;
     align-items: center;
+    border-width: 0;
     font-weight: 700;
     padding: 4px 12px;
     background-color: hsla(214, 100%, 81%, .7);
     color: hsl(214, 100%, 24%);
-    border-width: 0;
     border-radius: 40px 40px 40px 0px;;
     box-shadow: 0 5px 8px hsla(216, 85%, 20%, 0.3);
     position: absolute;
@@ -273,27 +311,39 @@ a{
     box-shadow: 0 4px 10px hsla(214, 85%, 41%, 0.6);
 } 
 
-.definitionContainer{
-    width: fit-content;
-    height: fit-content;
-    padding: 2% 3%;
-    background-color: hsl(214, 50%, 49%);
-    border-radius: 7px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform : translate(-50%, -50%);
-    box-shadow: 0 4px 5px hsla(214, 50%, 10%, .3);
+/* END OF HOVER TRANSLATION */
+
+/* DICTIONARY */
+
+.def-word{
+    position: relative;
 }
 
-.definitionContainer .origWord{
-    font-size: 11px;
+.definitionContainer{
+    /* padding: 1% 1.5%; */
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: hsl(214, 50%, 49%);
+    border-radius: 7px;
+    box-shadow: 0 4px 5px hsla(214, 50%, 10%, .3);
+    /* top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%); */
 }
+
 
 .definitionContainer div{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
 }
 
 .definitionContainer .transWord{
@@ -306,7 +356,6 @@ a{
     margin:.5% 0% 2% 5%;
     font-size: 14px;
     color: hsl(214, 50%, 84%);
-
 }
 .definitionContainer p{
     font-size: 11px;
@@ -318,17 +367,27 @@ a{
     margin:.5% 0% .5% 5%;
     color: hsl(214, 50%, 88%);
 }
-.definitionContainer button{
+.definitionContainer .closeBtn{
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    cursor: pointer;
     background-color: hsl(214, 50%, 80%);
-    width: 60px;
-    height: 30px;
+    color: #fff;
+    /* width: 60px; */
+    /* height: 30px; */
     border-width: 0;
-    border-radius: 7px;
+    border-radius: 7px; 
     float: right;
     box-shadow: 0 4px 5px hsla(214, 50%, 10%, .3);
+}
+
+.definitionContainer .closeBtn:hover{
+    background-color: hsl(0, 100%, 54%);
 
 }
 
+/* END OF DICTIONARY */
 
 
 

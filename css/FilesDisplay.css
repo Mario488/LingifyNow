@@ -51,12 +51,28 @@ header img{
     justify-content: space-between;
     background-color: hsla(213, 51%, 9%, 0.751);
     color: hsl(190, 66%, 90%);
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 4px;
 }
 
+.navbar span{
+    font-weight: bold;
+}
+
 .navbar #navSearchInpt{
-    padding: 3px;
+    padding: 5px 10px;
+    width: 200px;
+    border-radius: 5px;
+    transition: .3s all;
+}
+
+.navbar #navSearchInpt::placeholder{
+    letter-spacing: 3px;
+}
+
+.navbar #navSearchInpt:focus{ 
+    outline: 2px solid hsl(214, 50%, 60%);
+    transform: scale(1.05);
 }
 
 .navbar button{
@@ -76,6 +92,10 @@ header img{
     gap: 17px;
 }
 
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
 
 .filesText {
     font-size: 1rem;
@@ -122,8 +142,7 @@ div i{
     width: 50px;
     height: 70px;
     background: hsl(214, 50%, 50%);
-    border-radius: 4px;
-    flex-shrink: 0;
+    border-radius: 4px;;
 }
 .fileName {
     flex-grow: 1;
@@ -139,13 +158,11 @@ div i{
     display:none;
     position: absolute;
     margin-top: -2rem;
-    width: fit-content;
-    height: 100vh;
+    height: calc(100vh - 127px);
     padding-right: 2rem;
     margin-left: -2rem;
     background-color: hsl(214, 50%, 16%);
     transition: background-color 0.3s ease;
-    z-index: 9999; 
 }
 
 ul li {
@@ -163,9 +180,27 @@ ul li:hover {
 .sideBar ul{
     margin-right: -2rem;
 }
+.sideBar a{
+    text-decoration: none;
+}
+.sideBar a:visited{
+    color: inherit;
+}
 
 
+.fileSetting{
+    background-color:hsl(214, 50%, 18%);
+    width: fit-content;
+    height:fit-content;
+    color:hsl(214, 50%, 90%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px hsl(214, 50%, 5%, .4)
+}
 
+/* UPLOAD BUTTON */
 #uploadBtn {
     display: flex;
     align-items: center;
@@ -260,19 +295,12 @@ ul{
     margin-left: -2.5rem;
 }
 
-#settingPanel {
-    display:none;
-}
-
-#sortPanel {
+#settingPanel, #sortPanel, #fltrPanel{
     display: none;
-    
+    padding-left: 10px;
 }
 
-#fltrPanel {
-    display: none;
 
-}
 
 
 

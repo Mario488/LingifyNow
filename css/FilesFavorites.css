@@ -1,0 +1,193 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    margin: 1rem;
+    background-color: hsl(213, 51%, 12%);
+    color:rgb(211, 240, 246);
+}
+
+/* HEADER */
+header{
+    position: relative;
+    height: 60px;
+}
+
+header #webName{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: hsl(190, 66%, 90%);
+}
+
+header img{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+/* HEADER END */
+
+
+/* NAVIGATION */
+.navbar {
+    background-color: hsla(213, 51%, 9%, 0.751);
+    color: hsl(190, 66%, 90%);
+    display: flex;
+    height: .5rem;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+
+}
+
+.navBar .searchDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+}
+
+.navbar .loginBtn{
+    font-weight: bold;
+}
+
+.navbar .searchDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 17px;
+}
+
+.navbar #navSearchInpt{
+    padding: 5px 10px;
+    width: 200px;
+    border-radius: 5px;
+    transition: .3s all;
+}
+
+.navbar #navSearchInpt::placeholder{
+    letter-spacing: 3px;
+}
+
+.navbar #navSearchInpt:focus{ 
+    outline: 2px solid hsl(214, 50%, 60%);
+    transform: scale(1.05);
+}
+
+.navbar button{
+    background-color: transparent;
+    color: hsl(190, 66%, 90%); 
+    border-width: 0;
+    font-size: 1.1rem;
+}
+
+a{
+    color: hsl(214, 50%, 90%);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.navbar button:hover, a:hover{
+    color: hsl(214, 50%, 60%);
+}
+
+.navbar button:active, a:active{
+    color: hsl(214, 50%, 50%);
+}
+
+.navbar #fontSetting{
+    font-weight: bold;
+}
+
+.navbar .loginBtn{
+    font-weight: bold;
+}
+
+/* NAVIGATION END */
+
+div i{
+    color: hsl(190, 66%, 90%);
+}
+
+.fileListContainer {
+    max-width: 650px;
+    margin: auto;
+    margin-top: .5rem;
+}
+
+.fileItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid hsl(214, 50%, 30%);
+    border-radius: 8px;
+    background: hsl(214, 50%, 40%);
+    margin-bottom: 1rem;
+}
+
+.fileItem:hover {
+    background-color: hsl(214, 50%, 35%);
+}
+
+
+.fileImg {
+    width: 50px;
+    height: 70px;
+    background: hsl(214, 50%, 50%);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.fileName {
+    flex-grow: 1;
+    font-weight: bold;
+}
+.fileProperties {
+    font-size: 0.9rem;
+    color: hsl(214, 50%, 90%);
+    white-space: nowrap;
+}
+
+.contentContainer aside {
+    display:none;
+    position: absolute;
+    margin-top: -2rem;
+    height: calc(100vh - 127px);
+    padding-right: 2rem;
+    margin-left: -2rem;
+    background-color: hsl(214, 50%, 16%);
+    transition: background-color 0.3s ease;
+}
+
+ul li {
+    padding: 1rem;
+    margin: 0;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    list-style: none;
+}
+
+ul li:hover {
+    background-color: hsl(214, 50%, 30%);
+
+}
+.sideBar ul{
+    margin-right: -2rem;
+}
+.sideBar a{
+    text-decoration: none;
+}
+.sideBar a:visited{
+    color: inherit;
+}

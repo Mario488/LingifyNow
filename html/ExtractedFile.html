@@ -8,8 +8,11 @@
     <title>File</title>
 </head>
 <body>
+    <header>
+        <img src="../Lingi.png" alt="LingifyNow Icon" />
+        <span id="webName" class="webName">LingifyNow</span>
+    </header>
     <div class="extractedFileContainer">
-
         <nav class="navbar">
             <a class="fa-solid fa-arrow-left" href="../html/FilesDisplay.html"></a>
             <h3>Extracted File Title</h3>
@@ -17,7 +20,8 @@
                 <input for="search" id="navSearchInpt" type="text" placeholder="Search file">               
                 <i navSearchIcon class="fas fa-search" title="Search"></i>
             </div>
-            <button class="loginBtn">Login</button>
+            <a class="loginBtn" href="./Login.html">Login</a>
+            <a class="loginBtn" href="./SignUp.html">SignUp</a>
             <button id="fontSetting" class="fontSetting">Aa</button>
             <button class="fa-solid fa-pen-to-square"></button>
             <button id="tableContentIcon" class="fa-solid fa-list-ul"></button>
@@ -47,52 +51,24 @@
         <div class="page-container">
             <div class="document" id="document">
                 <p class="docContent">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
-                magnam repellat fugit, voluptas esse eos nulla?Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Provident, voluptate ratione? Architecto blanditiis ea deleniti 
-                impedit unde autem aspernatur labore nihil incidunt debitis 
+                    <!-- To fill this data-def attribute with the translation from the API -->
+                    <span class="def-word" data-word="dog">dog</span>
+                    <span class="def-word" data-word="cat">cat</span>
+                    <span class="def-word" data-word="human">human</span>
+                    <span class="def-word" data-word="human">human</span>
+
+                    <span class="def-word" data-word="human">human</span>
+
+                    <span class="def-word" data-word="human">human</span>
+
+                    <span class="def-word" data-word="human">human</span>
+
+
+                    <span class="def-word" data-word="human">human</span>
+                    <span class="def-word" data-word="human">human</span>
+
+
+                
                 </p>
             </div>
             
@@ -113,19 +89,16 @@
             </button>
         </div>
 
-        <div class="definitionContainer">
+        <div class="definitionContainer" id="definitionContainer">
             <div>
-                <span class="origWord">I love you</span>
-                <span class="transWord">Ich liebe dich</span> 
-                <span class="trasDefinition">Ich scheiße zweimal am Tag</span>
+                <span class="origWord" id="origWord">Love</span>
+                <span><i class="fa-solid fa-arrow-down"></i></span>
+                <span class="transWord" id="transWord">Liebe</span> 
+                <span id="wordDefinition"></span>
+                <button class="closeBtn" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
             </div>
-
-            <div>
-                <p>Sentence used:</p>
-                <span class="sentenceUsed">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-            </div>
-            <button>Close</button>
         </div>
+
 
 
 

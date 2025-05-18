@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../css/FilesDisplay.css">
+    <link rel="stylesheet" href="../css/FilesFavorites.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <title>File</title>
 </head>
-<body>
+<body> 
     <header>
         <img src="../Lingi.png" alt="LingifyNow Icon" />
         <span id="webName" class="webName">LingifyNow</span>
     </header>
     <div class="mainContainer">
-        <nav class="navbar">
+         <nav class="navbar">
             <button id="navMenuIcon" class="navMenuIcon"><i class="fas fa-bars" title="Menu"></i></button>
-            <span>Uploaded Files</span>
+            <span>Favorites</span>
             <div class="searchDiv">
                 <input for="search" id="navSearchInpt" type="text" placeholder="Search file">               
                 <button id="navSearchIcon" class="searchIcon"><i class="fas fa-search" title="Search"></i></button>
@@ -24,8 +24,9 @@
             <a class="loginBtn" href="./SignUp.html">SignUp</a>
             <button id="navSettingIcon" class="navSettingIcon"><i class="fas fa-cog" title="Settings"></i></butto>
         </nav>
+    </div>
 
-        <div class="contentContainer">
+     <div class="contentContainer">
             <aside id="sideBar" class="sideBar">
                 <ul>
                     <li class="file"><a href="./FilesDisplay.html">Files</a></li>
@@ -60,10 +61,11 @@
                     <i class="fa fa-ellipsis-vertical"></i>
                 </div>
 
-                     <div class="fileSetting">
+                <div class="fileSetting">
                     <ul>
-                        <li>Delete file</li>
-                        <li>Add to collection</li>
+                        <li>Delete File</li>
+                        <li>Add to Collection</li>
+                        <li>Add to Favorites</li>
                     </ul>
 
                 </div>
@@ -71,85 +73,14 @@
            
             </section>
 
-            <button id="uploadBtn">
-                    <i class="fa-regular fa-plus"></i>
-                        <p>Upload</p>
-                    <input type="file" id="fileInpt" accept=".txt,.pdf,.epub,.docx,.doc">
-            </button>   
 
-        </div>
 
-        <div id="settingPanel" class="settingContainer">
-            <ul>
-                <li>Delete list</li>
-                <li id="settingSortBtn">Sort by</li>
-                <li id="settingFltrBtn">Filter</li>
-                <li>Languages</li>
-                <li>Go to Premium</li>
-            </ul>
-        </div>
 
-        <div id="sortPanel" class="settingContainer">
-            <ul>
-                <p>Sort by</p>
-                <li>
-                <input type="radio" id="sortFileName" name="sort" value="fileName" />
-                <label for="sortFilename">File name</label>
-                </li>
-                <li>
-                <input type="radio" id="sortFormat" name="sort" value="format" />
-                <label for="sortFormat">File format</label>
-                </li>
-                <li>
-                <input type="radio" id="sortSize" name="sort" value="size" />
-                <label for="sortSize">File size</label>
-                </li>
-                <li>
-                <input type="radio" id="sortFodified" name="sort" value="modified" />
-                <label for="sortModified">Modified time</label>
-                </li>
-                <li>
-                <input type="radio" id="sortDateRead" name="sort" value="dateRead" />
-                <label for="sortDateRead">Date read</label>
-                </li>
-            </ul>
 
-        </div>
 
-        <div id="fltrPanel" class="settingContainer">
-            <ul>
-                <p>Filter</p>
-                <li>
-                    <input type="radio" id="fltrPdf" name="filter"/>
-                    <label for="fltrPdf">PDF</label>
-                </li>
-                <li>
-                    <input type="radio" id="fltrEpub" name="filter"/>
-                    <label for="fltrEpub">EPUB</label>
-                </li>
-                <li>
-                    <input type="radio" id="fltrDocx" name="filter"/>
-                    <label for="fltrDocx">DOCX</label>
-                </li>
-                <li>
-                    <input type="radio" id="fltrDoc" name="filter"/>
-                    <label for="fltrDoc">DOC</label>
-                </li>
-                <li>
-                    <input type="radio" id="fltrTxt" name="filter"/>
-                    <label for="fltrTxt">TXT</label>
-                </li>
-            </ul>
 
-                    
-        </div>
 
-       
-
-    
-    </div>
-
-    <script src="../js/FilesDisplay.js"></script>
+    <script src="../js/FilesFavorites.js"></script>
 </body>
-</html>
+<html>
 
