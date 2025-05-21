@@ -3,6 +3,10 @@ const origWord = document.getElementById('origWord');
 const transWord = document.getElementById('transWord');
 const defnWord = document.getElementById('wordDefinition');
 
+// Constants
+const MIN_FONT_SIZE = 16;
+const MAX_FONT_SIZE = 32;
+
 // Buttons
 const increaseFont = document.getElementById('increaseFont');
 const decreaseFont = document.getElementById('decreaseFont');
@@ -19,9 +23,10 @@ const tableContentContainer = document.getElementById('tableContentContainer');
 const doc = document.getElementById('document');
 const def_word_popUp = document.getElementById('definitionContainer');
 
-// Constants
-const MIN_FONT_SIZE = 16;
-const MAX_FONT_SIZE = 32;
+
+const docContent = document.getElementById('docContent');
+const progress = document.getElementById('progress');
+
 
 // Array with elements to close when clicked outside of them
 const elemsToClose = [textSettingContainer, tableContentContainer, doc];
@@ -44,6 +49,39 @@ function updateFontButtons(currFontSize) {
         increaseFont.disabled = false;
     }
 }
+
+// 1) Calculate the total number of pages needed based the content size and width and height of the document 
+// 2) If the total number of pages is >= 5 put 5 buttons in the progress bar
+// 3) Keep track of the current page and provide content for it
+// rough AVG size of a single character
+// width: 50px;
+// height 70px;
+
+// Momchi suggestion -> to search a specific word with the help of a trie (like ctrl + F)
+
+
+// for first page 
+function renderText(){
+    let numberOfWordsPerLine = (doc.offsetWidth - 100) / 7.27; // 100px is from margins, 7.27px wide character 
+    let numberOfLines = (doc.offsetHeight) / 20; // 20px between lines
+    let totalNumberOfCharacters = numberOfWordsPerLine * numberOfLines;
+    
+    let flip = false;
+    
+    for(let i = 0; i <= totalNumberOfCharacters; i++){
+        if(flip == false){
+            docContent.textContent += 'T';
+            flip = true;
+        }
+        else{
+            docContent.textContent += ' ';
+            flip = false;
+        }
+    }
+}
+
+
+
 
 async function getWordTranslation(word, from = 'en', to = 'de') {
     const url = `https://lingva.ml/api/v1/${from}/${to}/${encodeURIComponent(word)}`;
@@ -77,11 +115,11 @@ async function showWordInfo(word) {
 
 
 // Event listeners
-
 document.querySelectorAll('.def-word').forEach(word => {
     word.addEventListener('click', async (e) => {
         const rect = word.getBoundingClientRect();
         const wordToBeTranslated = word.dataset.word; 
+        
         def_word_popUp.style.display = 'flex';
 
         origWord.textContent = wordToBeTranslated;
@@ -89,10 +127,27 @@ document.querySelectorAll('.def-word').forEach(word => {
         defnWord.textContent = "Loading ...";
 
         // Adjust position of the box
-        def_word_popUp.style.left = `${(rect.left - rect.width / 2) + window.scrollX}px`;
-        def_word_popUp.style.top = `${rect.bottom + window.scrollY + 5}px`;
+        if(rect.y + def_word_popUp.offsetHeight > doc.offsetHeight){
+            def_word_popUp.style.left = `${(rect.left - rect.width / 2)}px`;
+            def_word_popUp.style.top = `${rect.top - def_word_popUp.offsetHeight}px`;
+        }
+        else{
+            def_word_popUp.style.left = `${(rect.left - rect.width / 2)}px`;
+            def_word_popUp.style.top = `${rect.bottom}px`;
+        }
+        
         // Get word translation and definition 
         await showWordInfo(wordToBeTranslated);
+
+        // Adjust the popup additionally based on how long the description is
+        if(rect.y + def_word_popUp.offsetHeight > doc.offsetHeight){
+            def_word_popUp.style.left = `${(rect.left - rect.width / 2)}px`;
+            def_word_popUp.style.top = `${rect.top - def_word_popUp.offsetHeight}px`;
+        }
+        else{
+            def_word_popUp.style.left = `${(rect.left - rect.width / 2)}px`;
+            def_word_popUp.style.top = `${rect.bottom}px`;
+        }
     })
 })
 
@@ -136,6 +191,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     const docStyle = window.getComputedStyle(doc);
     const currFontSize = parseFloat(docStyle.fontSize);
     updateFontButtons(currFontSize);
+    renderText();
 });
 
 
