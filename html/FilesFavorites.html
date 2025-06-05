@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/FilesFavorites.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <title>File</title>
+    <title>Favorites</title>
 </head>
 <body> 
     <header>
@@ -40,7 +40,7 @@
                     <div class="fileImg"></div>
                     <p class="fileName">The Legend of the </p>
                     <p class="fileProperties"><span class="format">PDF</span> <span class="size">1.5 MB</span></p>
-                    <i class="fa-regular fa-star" title="Favorite"></i>
+                    <i class="fa fa-star" title="Favorite"></i>
                     <i class="fa fa-thumbtack"></i>
                     <i class="fa fa-ellipsis-vertical"></i>
                 </div>
@@ -48,7 +48,7 @@
                     <div class="fileImg"></div>
                     <p class="fileName">The Legend of the</p>
                     <p class="fileProperties"><span class="format">PDF</span> <span class="size">1.5 MB</span></p>
-                    <i class="fa-regular fa-star" title="Favorite"></i>
+                    <i class="fa fa-star" title="Favorite"></i>
                     <i class="fa fa-thumbtack"></i>
                     <i class="fa fa-ellipsis-vertical"></i>
                 </div>
@@ -56,22 +56,92 @@
                     <div class="fileImg"></div>
                     <p class="fileName">The Legend of the</p>
                     <p class="fileProperties"><span class="format">PDF</span> <span class="size">1.5 MB</span></p>
-                    <i class="fa-regular fa-star" title="Favorite"></i></a>
+                    <i class="fa fa-star" title="Favorite"></i></a>
                     <i class="fa fa-thumbtack"></i>
                     <i class="fa fa-ellipsis-vertical"></i>
                 </div>
 
-                <div class="fileSetting">
+            </section>
+
+               <div class="fileSetting">
                     <ul>
-                        <li>Delete File</li>
-                        <li>Add to Collection</li>
-                        <li>Add to Favorites</li>
+                        <li>Delete file</li>
+                        <li>Add to collection</li>
+                    </ul>
+                </div>
+                 
+                <div id="settingPanel" class="settingContainer">
+                    <ul>
+                        <li>Delete list</li>
+                        <li id="settingSortBtn">Sort by</li>
+                        <li id="settingFltrBtn">Filter</li>
+                        <li>Languages</li>
+                        <li>Go to Premium</li>
+                    </ul>
+                </div>
+
+                <div id="sortPanel" class="settingContainer">
+                    <ul>
+                        <p>Sort by</p>
+                        <li>
+                        <input type="radio" id="sortFileName" name="sort" value="fileName" />
+                        <label for="sortFilename">File name</label>
+                        </li>
+                        <li>
+                        <input type="radio" id="sortFormat" name="sort" value="format" />
+                        <label for="sortFormat">File format</label>
+                        </li>
+                        <li>
+                        <input type="radio" id="sortSize" name="sort" value="size" />
+                        <label for="sortSize">File size</label>
+                        </li>
+                        <li>
+                        <input type="radio" id="sortFodified" name="sort" value="modified" />
+                        <label for="sortModified">Modified time</label>
+                        </li>
+                        <li>
+                        <input type="radio" id="sortDateRead" name="sort" value="dateRead" />
+                        <label for="sortDateRead">Date read</label>
+                        </li>
                     </ul>
 
                 </div>
+
+                <div id="fltrPanel" class="settingContainer">
+                    <ul>
+                        <p>Filter</p>
+                        <li>
+                            <input type="radio" id="fltrPdf" name="filter"/>
+                            <label for="fltrPdf">PDF</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="fltrEpub" name="filter"/>
+                            <label for="fltrEpub">EPUB</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="fltrDocx" name="filter"/>
+                            <label for="fltrDocx">DOCX</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="fltrDoc" name="filter"/>
+                            <label for="fltrDoc">DOC</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="fltrTxt" name="filter"/>
+                            <label for="fltrTxt">TXT</label>
+                        </li>
+                    </ul>
+                
+                </div>
+
+          
+
+
+            
+        </div>
                            
            
-            </section>
+          
 
 
 

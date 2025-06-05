@@ -3,35 +3,16 @@ const navSettingIcon = document.getElementById('navSettingIcon');
 const settingFltrBtn = document.getElementById('settingFltrBtn');
 const settingSortBtn = document.getElementById('settingSortBtn');
 const navMenuIcon = document.getElementById('navMenuIcon');
-const uploadBtn = document.getElementById('uploadBtn');
 
 // Panels/Containers
 const sortPanel = document.getElementById('sortPanel');
 const fltrPanel = document.getElementById('fltrPanel');
 const settingPanel = document.getElementById('settingPanel');
 const sideBar = document.getElementById('sideBar');
-const mainContainer = document.querySelector('.mainContainer');
-const uploadFileForm = document.querySelector('.uploadFileForm');
 
-const elemsToClose = [settingPanel, sortPanel, fltrPanel, sideBar, uploadFileForm];
-
-
-// Helper functions
-function blurMainContainer(){
-    const isVisible = uploadFileForm.style.display === 'flex';
-    mainContainer.style.filter = isVisible ? 'blur(2px)' : 'none';
-}
+const elemsToClose = [settingPanel, sortPanel, fltrPanel, sideBar];
 
 // Event listeners
-
-uploadBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); 
-    const isVisible = uploadFileForm.style.display === 'flex';
-    uploadFileForm.style.display = isVisible ? 'none' : 'flex';
-    blurMainContainer();
-})
-
-
 navSettingIcon.addEventListener('click', (e) => {
     e.stopPropagation(); 
     const isVisible = settingPanel.style.display === 'flex';
@@ -62,9 +43,9 @@ document.addEventListener('click', (e) => {
         sortPanel.style.display = 'none';
         fltrPanel.style.display = 'none';
         sideBar.style.display = 'none';
-        uploadFileForm.style.display = 'none';
     }
-    blurMainContainer();
+
+    
 });
 
 

@@ -39,7 +39,7 @@
                     <div class="fileImg"></div>
                     <p class="fileName">The Legend of the </p>
                     <p class="fileProperties"><span class="format">PDF</span> <span class="size">1.5 MB</span></p>
-                    <i class="fa-regular fa-star" title="Favorite"></i>
+                    <i id="FavIcon" class="fa-regular fa-star" title="Favorite"></i>
                     <i class="fa fa-thumbtack"></i>
                     <i class="fa fa-ellipsis-vertical"></i>
                 </div>
@@ -60,7 +60,7 @@
                     <i class="fa fa-ellipsis-vertical"></i>
                 </div>
 
-                     <div class="fileSetting">
+                    <div class="fileSetting">
                     <ul>
                         <li>Delete file</li>
                         <li>Add to collection</li>
@@ -74,7 +74,6 @@
             <button id="uploadBtn">
                     <i class="fa-regular fa-plus"></i>
                         <p>Upload</p>
-                    <input type="file" id="fileInpt" accept=".txt,.pdf,.epub,.docx,.doc">
             </button>   
 
         </div>
@@ -144,10 +143,67 @@
                     
         </div>
 
-       
-
-    
+        
+        
+        
+        
     </div>
+    <form action="" class="uploadFileForm">
+        <!-- name, genre  -->
+
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter file name"/>
+
+        <label for="genre">Genres</label>
+        <div class="genres-checkboxes">
+            <div>
+                <input id="romance-check" type="checkbox" value="Romance" name="Romance">
+                <label for="romance-check">Romance</label>
+            </div>
+            <div>
+                <input id="mystery-check" type="checkbox" value="Mystery" name="Mystery">
+                <label for="mystery-check">Mystery</label>
+            </div>
+            <div>                    
+                <input id="science-fiction-check" type="checkbox" value="Science Fiction" name="Science Fiction">
+                <label for="science-fiction-check">Science Fiction</label>
+            </div>
+            <div>
+                <input id="horror-check" type="checkbox" value="Horror" name="Horror">
+                <label for="horror-check">Horror</label>
+            </div>
+            <div>
+                <input id="biography-check" type="checkbox" value="Biography" name="Biography">
+                <label for="biography-check">Biography</label>
+            </div>
+            <div>
+
+                <input id="self-help-check" type="checkbox" value="Self-Help" name="Self-Help">                    
+                <label for="self-help-check">Self-Help</label>                </div>
+            <div>
+
+                              <input id="thriller-check" type="checkbox" value="Thriller" name="Thriller">
+                <label for="thriller-check">Thriller</label>
+            </div>
+            <div>
+                <input id="academic-check" type="checkbox" value="Academic" name="Academic">
+                <label for="academic-check">Academic</label>
+            </div>
+            
+            <!-- horizontal line between keep the file name and the rest of the genres  -->
+             <hr>
+            <div>
+                <input id="checkForFileName" type="checkbox">
+                <label for="checkForFileName">Keep file name</label>
+            </div>
+            <div class="flex">
+                <label for="fileInpt" class="">Upload File</label>
+                <input type="file" id="fileInpt" accept=".txt,.pdf,.epub,.docx,.doc"/>
+            </div>
+        </div>
+        
+
+    </form>
 
     <script src="../js/FilesDisplay.js"></script>
 </body>
